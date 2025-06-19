@@ -1,273 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Carolina Evelem</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        :root {
-            --roxo: #7a3fff;
-            --roxo-claro: #dcd3fa;
-            --preto: #333;
-            --cinza: #666;
-            --branco: #fff;
-        }
+<section class="projetos" id="projetos">
+  <h2 class="section-title">Projetos</h2>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-            font-family: 'Poppins', sans-serif;
-        }
+  <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+    <div style="flex: 1; min-width: 300px;">
+      <img src="https://via.placeholder.com/600x350.png?text=Imagem+do+Projeto+1" alt="Projeto Miniblog" style="width: 100%; border-radius: 10px;">
+    </div>
+    <div style="flex: 1; min-width: 250px;">
+      <h3>Miniblog</h3>
+      <ul>
+        <li>React</li>
+        <li>JavaScript</li>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>Responsivo</li>
+        <li>Firebase</li>
+      </ul>
+      <a href="https://github.com/seuusuario/miniblog" target="_blank" style="padding: 10px 20px; margin-right: 10px; background-color: black; color: white; border-radius: 5px; text-decoration: none;">Repositório</a>
+      <a href="https://seuusuario.github.io/miniblog" target="_blank" style="padding: 10px 20px; background-color: black; color: white; border-radius: 5px; text-decoration: none;">Demonstração</a>
+    </div>
+  </div>
 
-        body {
-            background-color: var(--branco);
-            color: var(--preto);
-        }
-
-        header {
-            background-color: var(--branco);
-            padding: 20px 10%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        header h1 {
-            color: var(--roxo);
-            font-size: 26px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--preto);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: var(--roxo);
-        }
-
-        .home {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 120px 10% 80px;
-            gap: 50px;
-        }
-
-        .home-text {
-            flex: 1;
-        }
-
-        .home-text h2 {
-            font-size: 36px;
-            color: var(--preto);
-        }
-
-        .home-text h1 {
-            font-size: 48px;
-            color: var(--roxo);
-            margin: 10px 0;
-        }
-
-        .home-text p {
-            font-size: 18px;
-            color: var(--cinza);
-            margin-bottom: 20px;
-        }
-
-        .home-text a {
-            background-color: var(--roxo);
-            color: var(--branco);
-            padding: 10px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-
-        .home-text a:hover {
-            background-color: var(--preto);
-        }
-
-        .home-img {
-            flex: 1;
-        }
-
-        .home-img img {
-            width: 100%;
-            max-width: 400px;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% {transform: translateY(0);}
-            50% {transform: translateY(-15px);}
-        }
-
-        section {
-            padding: 80px 10%;
-        }
-
-        .section-title {
-            font-size: 32px;
-            color: var(--preto);
-            border-left: 6px solid var(--roxo);
-            padding-left: 10px;
-            margin-bottom: 40px;
-        }
-
-        .sobre, .servicos, .portfolio {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .sobre p, .servicos p {
-            color: var(--cinza);
-            line-height: 1.7;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background-color: var(--roxo-claro);
-            padding: 20px;
-            border-radius: 12px;
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card i {
-            font-size: 32px;
-            color: var(--roxo);
-            margin-bottom: 10px;
-        }
-
-        .card h3 {
-            color: var(--preto);
-            margin-bottom: 10px;
-        }
-
-        footer {
-            background-color: var(--roxo);
-            color: var(--branco);
-            text-align: center;
-            padding: 20px;
-        }
-
-        footer a {
-            color: var(--branco);
-            margin: 0 10px;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: var(--roxo-claro);
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Carolina Evelem</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="home" id="home">
-        <div class="home-text">
-            <h2>Prazer, eu sou</h2>
-            <h1>Carolina Evelem</h1>
-            <p>Web Designer & Editora | Transformo ideias em projetos criativos e profissionais.</p>
-            <a href="#contato">Fale comigo</a>
-        </div>
-        <div class="home-img">
-            <img src="foto.png.jpg" alt="Foto de Carolina">
-        </div>
-    </section>
-
-    <section class="sobre" id="sobre">
-        <h2 class="section-title">Sobre Mim</h2>
-        <p>Sou apaixonada por design, tecnologia e criatividade. Estou finalizando minha formação, mas já possuo certificação como Web Designer e também trabalho com edição de imagens e vídeos. Estou sempre em busca de novos desafios e aprendizados. Meu objetivo é ajudar pessoas e negócios a terem uma presença digital bonita, funcional e profissional.</p>
-    </section>
-
-    <section class="servicos" id="servicos">
-        <h2 class="section-title">Serviços</h2>
-        <div class="cards">
-            <div class="card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Web Design</h3>
-                <p>Criação de sites modernos, responsivos e personalizados.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-pen-nib"></i>
-                <h3>Design Gráfico</h3>
-                <p>Criação de artes para redes sociais, banners e materiais digitais.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-edit"></i>
-                <h3>Edição</h3>
-                <p>Edição de imagens, vídeos e materiais para divulgação.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="portfolio" id="portfolio">
-        <h2 class="section-title">Portfólio</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Projeto 1</h3>
-                <p>Site institucional desenvolvido para prática.</p>
-            </div>
-            <div class="card">
-                <h3>Projeto 2</h3>
-                <p>Landing page para divulgação de serviço.</p>
-            </div>
-            <div class="card">
-                <h3>Projeto 3</h3>
-                <p>Arte para redes sociais e banners promocionais.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contato">
-        <p>© 2025 Carolina Evelem | Todos os direitos reservados.</p>
-        <p>
-            <a href="#">Instagram</a> |
-            <a href="#">LinkedIn</a> |
-            <a href="mailto:email@email.com">Email</a>
-        </p>
-    </footer>
-
-</body>
-</html>
+  <div style="margin-top: 60px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+    <div style="flex: 1; min-width: 300px;">
+      <img src="https://via.placeholder.com/600x350.png?text=Imagem+do+Projeto+2" alt="Projeto Organo" style="width: 100%; border-radius: 10px;">
+    </div>
+    <div style="flex: 1; min-width: 250px;">
+      <h3>Organo - Refatorado</h3>
+      <ul>
+        <li>React</li>
+        <li>JavaScript</li>
+        <li>CSS</li>
+        <li>HTML</li>
+      </ul>
+      <a href="https://github.com/seuusuario/organo" target="_blank" style="padding: 10px 20px; margin-right: 10px; background-color: black; color: white; border-radius: 5px; text-decoration: none;">Repositório</a>
+      <a href="https://seuusuario.github.io/organo" target="_blank" style="padding: 10px 20px; background-color: black; color: white; border-radius: 5px; text-decoration: none;">Demonstração</a>
+    </div>
+  </div>
+</section>
